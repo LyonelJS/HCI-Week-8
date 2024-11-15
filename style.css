@@ -1,0 +1,227 @@
+
+.supercontainer{ /**background color and size of the navbar**/
+    display:flex;
+    width:100%;
+    height: 100px;
+    background-color:black;
+    align-items:center;
+}
+.home{ /**the home button in the navbar**/
+    margin-left:10px; /**left margin**/
+    width:90px;
+    height:80px; /**width and height of the pressable home logo**/
+    justify-content:center; /**center the content**/
+}
+
+.container1, .container2, .container3{ /**hides the regular options of the nav bar**/
+    display:none;
+}
+.dropdown{ /**hidden dropdown menu(displayed when the menu option is clicked) has the same function as the regular nav bar**/
+    background-color: black; /**background color**/
+    padding:5px; /**padding**/
+    padding-left:20px;
+    width:55%; /**width**/
+    margin-left:30%; /**margin**/
+    margin-bottom: 10%;
+    position:fixed;
+    display:none; /**hides it initially**/
+    flex-direction:column;
+    z-index:100; /**makes sure it is not covered by other elements**/
+    border-top: 3px solid white; /**borders**/
+    border-left: 2px solid lightgray;
+    border-radius:5px;
+
+}
+.menu{ /**menu option to replace the navbar to be more space efficient for smaller screens**/
+    width:50px; /**height and width**/
+    height:50px;
+    margin-top:-80px; /**sets the position of the menu icon**/
+    margin-left:90%;
+    display:flex;
+    flex-direction:column;
+    cursor:pointer; /**makes it pressable**/
+}
+.menu.active{ /**alters the menu icon's decoration when it is selected**/
+    border-left: 5px solid white;
+    background-color:gray;
+    border-radius:10px;
+}
+.line{ /**the lines in the menu icon**/
+    width:40px;
+    height:5px;
+    background-color:white;
+    border-radius:5px;
+    margin:5px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /**Smooth transition for transformation of the lines**/
+
+}
+.menu1, .menu2, .menu3{ /**the links to travel to another page**/
+    width:90%;
+    padding-left:5%;
+}
+
+.menu1:hover, 
+.menu2:hover, 
+.menu3:hover{ /**decoration**/
+    background-color:gray;
+    border: 2px solid white ;
+    border-radius:15px;
+}
+.menu1.active, 
+.menu2.active, 
+.menu3.active{ /**makes the links have border when the current selected page is opened**/
+    border: 2px solid white ;
+    border-radius:15px;
+}
+.header{ /**adjust header for every page when opened in small screens**/
+    margin:auto;
+    margin-top:10%;
+}
+.menu.active .line:nth-child(1) { /**transforms the 3 lines icon of the menu into an x when pressed**/
+    transform: rotate(45deg) translate(11px, 11px);; /**rotates the top line to form an x (go back logo)**/
+  
+}
+
+.menu.active .line:nth-child(2) { /**transforms the 3 lines icon of the menu into an x when pressed**/
+    opacity: 0; /**Hide middle line**/
+}
+
+.menu.active .line:nth-child(3) { /**transforms the 3 lines icon of the menu into an x when pressed**/
+    transform: rotate(-45deg) translate(11px, -11px);; /**rotates the bottom line to form an x (go back logo)**/
+   
+}
+
+.contacts{ /**makes sure the contacts is not covered by other elements in smaller screens**/
+    z-index:10;
+}
+
+.link a:link, a:active, a:visited{ /**link decorations**/
+    color: white;
+}
+
+.link{ /**nav bar link decoration**/
+    text-decoration:none;
+}
+
+.header{ /**decoration of header in every page**/
+    background-color:black;
+    color:white;
+    margin:35px;
+    margin-left:30%;
+    margin-right:30%;
+    text-align:center;
+    border-radius:10px;
+}
+
+
+.contacts{ /**contacts div**/
+    background-color:black; /**background color**/
+    display:flex;
+    justify-content:center; /**center the content of the div**/
+    width:100%; /**fills the entire width of the page**/
+    height:100px; /**height of the div**/
+    position:absolute;
+    margin-top:30%; /**positions the div to the bottom of the page**/
+    z-index:-2; /**makes the div behind everything else**/
+    align-items:center; /**centers the content**/
+}
+.contacts img{ /**size of the instagram and whatsapp logo**/
+    width:30px;
+}
+.contacts a{ /**decoration of the contacts links**/
+    text-decoration:none;
+    color:white;
+}
+.contacts div{ /** formats the divs inside the main contacts div**/
+    width:50px;
+    margin:50px;
+    justify-content:center;
+    display:flex;
+    text-align:center;
+}
+
+
+
+@media(max-width:450px){ /**adjusts the navbar for smaller screens**/
+    .container1, .container2, .container3{ /**hides the regular options of the nav bar**/
+        display:none;
+    }
+    .dropdown{ /**hidden dropdown menu(displayed when the menu option is clicked) has the same function as the regular nav bar**/
+        background-color: black; /**background color**/
+        padding:5px; /**padding**/
+        padding-left:20px;
+        width:55%; /**width**/
+        margin-left:30%; /**margin**/
+        margin: bottom 10%;
+        position:fixed;
+        display:none; /**hides it initially**/
+        flex-direction:column;
+        z-index:100; /**makes sure it is not covered by other elements**/
+        border-top: 3px solid white; /**borders**/
+        border-left: 2px solid lightgray;
+        border-radius:5px;
+
+    }
+    .menu{ /**menu option to replace the navbar to be more space efficient for smaller screens**/
+        width:50px; /**height and width**/
+        height:50px;
+        margin-top:-80px; /**sets the position of the menu icon**/
+        margin-left:78%;
+        display:flex;
+        flex-direction:column;
+        cursor:pointer; /**makes it pressable**/
+    }
+    .menu.active{ /**alters the menu icon's decoration when it is selected**/
+        border-left: 5px solid white;
+        background-color:gray;
+        border-radius:10px;
+    }
+    .line{ /**the lines in the menu icon**/
+        width:40px;
+        height:5px;
+        background-color:white;
+        border-radius:5px;
+        margin:5px;
+        transition: transform 0.3s ease, opacity 0.3s ease; /**Smooth transition for transformation of the lines**/
+
+    }
+    .menu1, .menu2, .menu3{ /**the links to travel to another page**/
+        width:125px;
+        padding-left:10px;
+    }
+    
+    .menu1:hover, 
+    .menu2:hover, 
+    .menu3:hover{ /**decoration**/
+        background-color:gray;
+        border: 2px solid white ;
+        border-radius:15px;
+    }
+    .menu1.active, 
+    .menu2.active, 
+    .menu3.active{ /**makes the links have border when the current selected page is opened**/
+        border: 2px solid white ;
+        border-radius:15px;
+    }
+    .header{ /**adjust header for every page when opened in small screens**/
+        margin:auto;
+        margin-top:10%;
+    }
+    .menu.active .line:nth-child(1) { /**transforms the 3 lines icon of the menu into an x when pressed**/
+        transform: rotate(45deg) translate(11px, 11px);; /**rotates the top line to form an x (go back logo)**/
+      
+    }
+    
+    .menu.active .line:nth-child(2) { /**transforms the 3 lines icon of the menu into an x when pressed**/
+        opacity: 0; /**Hide middle line**/
+    }
+    
+    .menu.active .line:nth-child(3) { /**transforms the 3 lines icon of the menu into an x when pressed**/
+        transform: rotate(-45deg) translate(11px, -11px);; /**rotates the bottom line to form an x (go back logo)**/
+       
+    }
+
+    .contacts{ /**makes sure the contacts is not covered by other elements in smaller screens**/
+        z-index:10;
+    }
+}

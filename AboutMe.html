@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contentAboutMe{ /**about me page content**/
+    background-color:lightgray;
+    height:450px;
+    margin-left:50px;
+    margin-right:50px;
+    padding:50px;
+    font-size:larger;
+    text-align:center;
+}
+.aboutMeImage{ /**image in about me page**/
+    margin-top:15px;
+    width:350px;
+    border-radius:100px;
+}
+@media(max-width:450px){ /**adjust for smaller screens**/
+
+        .contentAboutMe{ /**adjust the margin, and padding**/
+    height:auto;
+    margin-left:20px;
+    margin-right:20px;
+    margin-top:10px;
+    padding:15px;
+}
+.aboutMeImage{ /**adjust the size of the image**/
+    margin-top:15px;
+    width:80%;
+    border-radius:100px;
+}
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="supercontainer"> <!--navbar-->
+            <div class="home"><a href="index.html"><img src="home.png" alt="home" width="80px" height="70px" style="border-radius:50px"></a></div> <!--home-->
+            <div class="container1">
+                <a href="AboutMe.html" class="link"><h1>About Me</h1></a> <!--aboutme page-->
+            </div>
+            <div class="container2">
+                <a href="hobby.html" class="link"><h1>Interests</h1></a> <!--interests page-->
+            </div>
+            <div class="container3">
+                <a href="education.html" class="link"><h1>Education</h1></a> <!--Education page-->
+            </div>
+        </div>
+        <div class="menu" id="menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    
+    <div class="dropdown" id="dropdown">
+        <div class="menu1">
+            <a href="AboutMe.html" class="link"><h2>About Me</h2></a> <!--aboutme page-->
+        </div>
+        <div class="menu2">
+            <a href="hobby.html" class="link"><h2>Interests</h2></a> <!--interests page-->
+        </div>
+        <div class="menu3">
+            <a href="education.html" class="link"><h2>Education</h2></a> <!--Education page-->
+        </div>
+    </div>
+    <h1 class="header">About Me</h1> <!--nav bar-->
+    <div class="contentAboutMe"> <!--about me content-->
+        <div> <!--about me paragraph-->
+            <p>Hi! My full name is Lyonel Judson Saputra, you can call me Lyonel. I am currently studying in Binus International University in Senayan. My major is computer Science and I am a B28 student. I just graduated from IPEKA BSD high school. In my free time, I enjoy playing games. </p>
+        </div>
+        <img src="lyonel2.png" width="350px" alt="image" class="aboutMeImage"> <!--image in about me page-->
+    </div>
+    <div class="contacts" id="contacts"> <!--my contacts-->
+        <div class="whatsapp">
+            <a href="https://wa.me/087771523150"><img src="whatsapp.png" alt="whatsapp">+627771523150</a>
+        </div>
+        <div class="instagram">
+            <a href="https://www.instagram.com/lyoneljudson/"><img src="instagram.webp" alt="instagram">@lyoneljudson</a>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+
+</body>
+</html>

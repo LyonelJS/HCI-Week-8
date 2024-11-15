@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .scrollbar{
+            width: 95%;
+            background-color: black;
+            margin:30px;
+            margin-top:60px;
+            justify-content:center;
+            text-align:center;
+            display:flex;
+            border-radius:20px
+        }
+        .scroll-option{
+            margin:30px;
+            text-align: center;
+            width: 20%;
+            border-radius:30px;
+        }
+        .scroll-option:hover{
+            background-color:gray;
+        }
+        .scroll-option a{
+            display:block;
+            width:100%;
+            height:100%;
+        }
+        
+        .contentEducation{  /**Education content general format**/
+    display:flex;
+    justify-content:center;
+    text-align:center;
+    background-color:lightgray;
+    margin-left:50px;
+    margin-right:50px;
+    padding:20px;
+    flex-direction:column;
+    border:5px solid black;
+    border-radius:10px;
+}
+.contentEducation a{ /** link decoration**/
+    text-decoration:none;
+    color:black;
+}
+.elementary{ /**elementary content**/
+    border-bottom:5px double black;
+    padding:10px;
+}
+.description{ /**description**/
+    background-color:white;
+    border-radius:10px;
+    padding:10px;
+}
+.elementaryLink{ /**link to elementary website**/
+    justify-content:center;
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+}
+.guide{ /**click for more sign**/
+    margin-bottom:0px;
+    margin-top:0px;
+}
+.elementaryImage{ /**elementary school image**/
+    width:850px;
+    height:550px;
+    background-image:url(binusEL.jpg)
+}
+.elementaryImage {
+    background-size:cover
+}
+.elementaryImage:hover{ /**enlarge photo**/
+    width:1024px;
+    height:768px;
+}
+
+.primary{ /**primary school content**/
+    border-bottom:5px double black;
+    padding:10px;
+}
+.description2{ /**primary school description**/
+    background-color:white;
+    border-radius:10px;
+    padding:10px;
+}
+.primaryLink{ /**link to primary school website**/
+    justify-content:center;
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+}
+.guide{ /**click for more sign**/
+    margin-bottom:0px;
+    margin-top:0px;
+}
+.primaryImage{ /**primary school image**/
+    width:850px;
+    height:550px;
+    background-image:url(ipeka.jpg)
+}
+.primaryImage {
+    background-size:cover
+}
+.primaryImage:hover{ /**photo enlargement**/
+    width:1024px;
+    height:768px;
+}
+
+.uni{ /**uni content**/
+    padding:10px;
+}
+.description3{ /**university description**/
+    background-color:white;
+    border-radius:10px;
+    padding:10px;
+}
+.uniLink{ /**link to university web**/
+    justify-content:center;
+    align-items:center;
+    display:flex;
+    flex-direction:column;
+}
+.guide{ /**click for more sign**/
+    margin-bottom:0px;
+    margin-top:0px;
+}
+.uniImage{ /**university image**/
+    width:850px;
+    height:550px;
+    background-image:url(binusuni.jpg)
+}
+.uniImage {
+    background-size:cover
+}
+.uniImage:hover{ /**university photo enlargement**/
+    width:1024px;
+    height:768px;
+}
+
+@media(max-width:450px){ /**responsiveness**/
+    .scrollbar{
+        flex-direction:column;
+        width:80%;
+    }
+    .scroll-option{
+        width:80%;
+    }
+    .contentEducation{ /**makes the margin smaller to adjust for smaller screens**/
+        margin:10px;
+    }
+    .uni, .primary, .elementary{ /**reduce the padding**/
+        padding:5px;
+    }
+    .elementaryImage, .primaryImage, .uniImage{ /**make the images smaller**/
+        width:90%;
+        min-height:100px;
+        max-height:200px;
+    }
+    .elementaryImage:hover, .primaryImage:hover, .uniImage:hover{ /**adjust the photo enlargement**/
+        width:95%;
+        max-height:220px;
+    }
+    .guide{ /**make the font size smaller**/
+        font-size: medium;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="supercontainer"> <!--navbar-->
+            <div class="home"><a href="index.html"><img src="home.png" alt="home" width="80px" height="70px" style="border-radius:50px"></a></div> <!--home-->
+            <div class="container1">
+                <a href="AboutMe.html" class="link"><h1>About Me</h1></a> <!--aboutme page-->
+            </div>
+            <div class="container2">
+                <a href="hobby.html" class="link"><h1>Interests</h1></a> <!--interests page-->
+            </div>
+            <div class="container3">
+                <a href="education.html" class="link"><h1>Education</h1></a> <!--Education page-->
+            </div>
+        </div>
+        <div class="menu" id="menu"> <!--pressable menu icon (for smaller screens)-->
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    
+    <div class="dropdown" id="dropdown"> <!--dropdown menu when the menu icon is pressed (used for navigating between pages)-->
+        <div class="menu1">
+            <a href="AboutMe.html" class="link"><h2>About Me</h2></a> <!--aboutme page-->
+        </div>
+        <div class="menu2">
+            <a href="hobby.html" class="link"><h2>Interests</h2></a> <!--interests page-->
+        </div>
+        <div class="menu3">
+            <a href="education.html" class="link"><h2>Education</h2></a> <!--Education page-->
+        </div>
+    </div>
+    <div class="scrollbar">
+            <div class="scroll-option"><a href="#elementary" class="link"><h2>Elementary</h2></a></div>
+            <div class="scroll-option"><a href="#primary" class="link"><h2>Primary/Secondary</h2></a></div>
+            <div class="scroll-option"><a href="#uni" class="link"><h2>University</h2></a></div>
+    </div>
+    <h1 class="header">My Education</h1> <!--header-->
+    <div class="contentEducation"> <!--education content-->
+        <div class="elementary" id="elementary"> <!--elementary-->
+            <div class="description"> <!--description-->
+                <h1>Kindergarten and Elementary School</h1>
+                <h3>I studied in BINUS Serpong from kindergarten to grade 6.</h3>
+            </div>
+            <a href="https://serpong.binus.sch.id/"><div class="elementaryLink"> <!--link and image-->
+                <div class="elementaryImage"></div>
+                <h1 class="guide">^</h1>
+                <h2 class="guide">click for more</h2>
+            </div></a>
+        </div>
+        <div class="primary" id="primary"> <!--junior and senior high-->
+            <div class="description2"> <!--description-->
+                <h1>Junior and Senior High School</h1>
+                <h3>I studied in IPEKA BSD from Junior High to Senior High. (grade 7 to grade 12)</h3>
+            </div>
+            <a href="https://ipeka.org/id/location/ipeka-bsd/"><div class="primaryLink"> <!--link and image-->
+                <div class="primaryImage"></div>
+                <h1 class="guide">^</h1>
+                <h2 class="guide">click for more</h2>
+            </div></a>
+        </div>
+        <div class="uni" id="uni"> <!--university-->
+            <div class="description3"> <!--description-->
+                <h1>University</h1>
+                <h3>I am currently studying here, in BINUS International University</h3>
+            </div>
+            <a href="https://binus.ac.id/"><div class="uniLink"> <!--link and image-->
+                <div class="uniImage"></div>
+                <h1 class="guide">^</h1>
+                <h2 class="guide">click for more</h2>
+            </div></a>
+        </div>
+    </div>
+    <div class="contacts" id="contacts"> <!--my contacts-->
+        <div class="whatsapp">
+            <a href="https://wa.me/087771523150"><img src="whatsapp.png" alt="whatsapp">+627771523150</a>
+        </div>
+        <div class="instagram">
+            <a href="https://www.instagram.com/lyoneljudson/"><img src="instagram.webp" alt="instagram">@lyoneljudson</a>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+
+</body>
+</html>

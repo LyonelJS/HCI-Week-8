@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contentHobby {
+            background-color: lightgray;
+            margin-left: 50px;
+            margin-right: 50px;
+            padding: 50px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            border: 5px solid black;
+            border-radius: 10px;
+        }
+ 
+        .game {
+            position: relative;
+            justify-content: center;
+        }
+
+        .container {
+            width: 850px;
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+            border-color: black;
+            border-radius: 10px;
+        }
+
+        .container img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            display: none;
+            top: 0;
+            left: 0;
+        }
+
+        .container img.active {
+            display: block;
+        }
+
+        .slider {
+            display: flex;
+            font-size: xx-large;
+            justify-content: center;
+        }
+
+        .slider a {
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .slider a:hover {
+            color: darkslategray;
+        }
+
+        .slider a:active {
+            color: gray;
+        }
+
+        .caption {
+            display: flex;
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            color: black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .container:hover {
+            width: 1000px;
+            height: 450px;
+        }
+
+        .game:hover .caption {
+            opacity: .3;
+            bottom: 100px;
+        }
+
+        /* Mobile responsive styling */
+        @media(max-width: 450px) {
+            .contentHobby {
+                margin-left: 10px;
+                margin-right: 10px;
+                padding: 10px;
+            }
+
+            .game {
+                width: 90%;
+                height: 60%;
+            }
+
+            .container {
+                width: 90%;
+                margin-left: 5%;
+                min-height: 150px;
+                max-height: 150px;
+            }
+
+            .container:hover {
+                width: 100%;
+                margin-left: 1%;
+            }
+
+            .caption {
+                font-size: x-small;
+                bottom: 40%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="supercontainer"> <!--navbar-->
+            <div class="home"><a href="index.html"><img src="home.png" alt="home" width="80px" height="70px" style="border-radius:50px"></a></div> <!--home-->
+            <div class="container1">
+                <a href="AboutMe.html" class="link"><h1>About Me</h1></a> <!--aboutme page-->
+            </div>
+            <div class="container2">
+                <a href="hobby.html" class="link"><h1>Interests</h1></a> <!--interests page-->
+            </div>
+            <div class="container3">
+                <a href="education.html" class="link"><h1>Education</h1></a> <!--Education page-->
+            </div>
+        </div>
+        <div class="menu" id="menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    
+    <div class="dropdown" id="dropdown">
+        <div class="menu1">
+            <a href="AboutMe.html" class="link"><h2>About Me</h2></a> <!--aboutme page-->
+        </div>
+        <div class="menu2">
+            <a href="hobby.html" class="link"><h2>Interests</h2></a> <!--interests page-->
+        </div>
+        <div class="menu3">
+            <a href="education.html" class="link"><h2>Education</h2></a> <!--Education page-->
+        </div>
+    </div>
+    
+    <h1 class="header">My Interests</h1>
+    <div class="contentHobby">
+        <div class="game">
+            <div class="container">
+                <img class="active" src="mole1.PNG" alt="Game 1">
+                <img src="mole2.PNG" alt="Game 2">
+                <img src="mole3.PNG" alt="Game 3">
+            </div>
+            <nav class="slider">
+                <a href="#" class="prev"><h1>&lt;</h1></a>
+                <a href="#" class="next"><h1>&gt;</h1></a>
+            </nav>
+            <div class="caption">
+                <h1>Playing Games</h1>
+            </div>
+        </div>
+    </div>
+
+    <script src="menu.js"></script>
+</body>
+</html>

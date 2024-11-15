@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contentHome{ /**home content**/
+            display:flex;
+            justify-content:center;
+            position:relative;
+            z-index:-1;
+        }
+        .contentHome:hover .homeImage{ /**blur effect when hovering over the image**/
+            opacity: 0.5;
+            filter:blur(3px);
+        }
+        .contentHome:hover .homeParagraph{ /**blur effect when hovering over the paragraph**/
+            opacity: 0.5;
+            filter:blur(3px);
+        }
+        .contentHome:hover .header{ /**blur effect**/
+            opacity: 0.5;
+            filter:blur(3px);
+        }
+        .homeParagraph{ /**home paragraph formating and decoration**/
+            background-color:lightgray;
+            width:800px;
+            height:300px;
+            margin-left:30%;
+            margin-right:50px;
+            margin-top:5%;
+            padding:50px;
+            text-align:center;
+            position:fixed;
+            z-index:1;
+            font-size:larger;
+        }
+        .name{ /**text decoration**/
+            color:darkblue;
+            font-weight:900;
+        }
+        .contentHome .homeParagraph:hover{ /**makes the paragraph bigger when hovering over it**/
+            width:1000px;
+            height:400px;
+            margin-right:20%;
+            z-index:2;
+            font-size:x-large;
+            opacity:1;
+            filter:blur(0px);
+        }
+
+        .homeImage{ /**the image in the home screen**/
+            margin-left:50px;
+            margin-right:70%;
+            margin-top:5%;
+            position:fixed;
+            border-radius:400px;
+            width:400px;
+            z-index:1;
+        }
+        .contentHome .homeImage:hover{ /**makes the image larger**/
+            width:500px;
+            border-radius:500px;
+            margin-left:10%;
+            z-index:2;
+            opacity:1;
+            filter:blur(0px);
+        }
+
+        @media (max-width: 450px) { /**adjustment for small screen**/
+            .homeContent{ /**content home**/
+                display:flex;
+                justify-content:center;
+                text-align: center;
+            }
+            .homeParagraph { /**text in home page adjusted (smaller font, margin, and padding)**/
+                width: 80%; /**make the width of the div smaller**/
+                height:auto;
+                padding: 15px; /** Adjust padding **/
+                font-size: medium; /** Adjust font size for smaller screens **/
+                margin: 10px ; /** Center the paragraph **/
+                margin-top:95%;
+                font-size:small;
+            }
+            .homeImage {
+                width: 70%; /** Make image smaller **/
+                margin: 5% ; /** Adjust margin **/
+                margin-top:22%;
+
+            }
+            .contentHome .homeImage:hover {
+                width: 80%; /** Adjust hover effect **/
+                margin:5px ;
+                margin-top:17%;
+            }
+            .contentHome .homeParagraph:hover {
+                width: 85%; /** Adjust hover effect **/
+                height:auto;
+                margin:5px auto;
+                margin-top:70%;
+                font-size:medium;
+
+            }
+            .contacts{ /**adjust contacts div position**/
+                margin-top:140%;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="supercontainer"> <!--navbar-->
+            <div class="home"><a href="index.html"><img src="home.png" alt="home" width="80px" height="70px" style="border-radius:50px"></a></div> <!--home-->
+            <div class="container1">
+                <a href="AboutMe.html" class="link"><h1>About Me</h1></a> <!--aboutme page-->
+            </div>
+            <div class="container2">
+                <a href="hobby.html" class="link"><h1>Interests</h1></a> <!--interests page-->
+            </div>
+            <div class="container3">
+                <a href="education.html" class="link"><h1>Education</h1></a> <!--Education page-->
+            </div>
+        </div>
+        <div class="menu" id="menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    
+    <div class="dropdown" id="dropdown">
+        <div class="menu1">
+            <a href="AboutMe.html" class="link"><h2>About Me</h2></a> <!--aboutme page-->
+        </div>
+        <div class="menu2">
+            <a href="hobby.html" class="link"><h2>Interests</h2></a> <!--interests page-->
+        </div>
+        <div class="menu3">
+            <a href="education.html" class="link"><h2>Education</h2></a> <!--Education page-->
+        </div>
+    </div>
+    <div class="contentHome"> <!--content home-->
+        <h1 class="header">Home Page</h1> <!--header-->
+        <img src="lyonel.PNG" alt="image" class="homeImage"> <!--photo-->
+        <div class="homeParagraph"> <!--introduction-->
+            <h2>Hi I am</h2>
+            <h1 class="name">Lyonel Judson Saputra</h1>
+            <h2>This is a Website</h2>
+            <h1>About Me</h1>
+        </div>
+    </div>
+    <div class="contacts"> <!--my contacts-->
+        <div class="whatsapp">
+            <a href="https://wa.me/087771523150"><img src="whatsapp.png" alt="whatsapp">+627771523150</a>
+        </div>
+        <div class="instagram">
+            <a href="https://www.instagram.com/lyoneljudson/"><img src="instagram.webp" alt="instagram">@lyoneljudson</a>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+</body>
+</html>
